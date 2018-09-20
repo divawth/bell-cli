@@ -1,0 +1,69 @@
+$selector-layout = $selector-prefix + '-layout';
+$selector-layout-header = $selector-layout + '-header';
+$selector-layout-footer = $selector-layout + '-footer';
+$selector-layout-has-sider = $selector-prefix + '-layout-has-sider';
+$selector-layout-fixed = $selector-layout + '-fixed';
+
+$selector-menu = $selector-prefix + '-menu';
+$selector-menu-vertical = $selector-prefix + '-menu-vertical';
+
+$selector-sider-collapsed = $selector-prefix + '-layout-sider-collapsed';
+$selector-sider = $selector-prefix + '-sider';
+
+$layout-menu-item-color = #BABDC3;
+$layout-menu-item-padding = 0 10px;
+$layout-menu-item-active-color = #57a3f3;
+
+$layout-hash = {
+    header: {
+        flex: 0 0 62px
+    },
+    content: {
+        flex: 1
+    },
+    footer: {
+        flex: 0 0 62px
+    },
+    sider: {
+        flex: 0 0 200px
+    },
+    sider-collapsed: {
+        flex: 0 0 78px
+    }
+};
+
+
+$layout-menu-theme-hash = {
+    'light': {
+        background-color: $brand-bg,
+        color: $brand-main,
+        border-bottom-color: $brand-border,
+
+        background-color-hover: $brand-bg,
+        color-hover: $brand-primary,
+        border-bottom-color-hover: $brand-primary
+    },
+    'dark': {
+        background-color: #453C4B,
+        color: $brand-text-disabled,
+        border-bottom-color: #f90,
+
+        background-color-hover: #453C4B,
+        color-hover: $brand-white,
+        border-bottom-color-hover: #f90
+    },
+    'primary': {
+        background-color: $brand-primary,
+        color: $brand-white,
+        border-bottom-color: transparent,
+
+        background-color-hover: $brand-primary-hover,
+        color-hover: $brand-white,
+        border-bottom-color-hover: transparent
+    }
+};
+
+
+
+
+

@@ -1,0 +1,44 @@
+radio-button-group-style(style)
+
+    {$selector-radio}
+
+        ui-set('background-color', style['bg-color'])
+
+        {$selector-radio}-label
+
+            ui-set('color', style['color'])
+
+        &{$selector-hover}
+
+            {$selector-radio}-label
+
+                ui-set('color', style['color-hover'])
+
+        &{$selector-active}
+
+            ui-set('background-color', style['bg-color-hover'])
+
+            {$selector-radio}-label
+
+                ui-set('color', style['color-active'])
+
+
+radio-button-group-size(size)
+
+    ui-set('font-size', size['font'])
+
+    {$selector-radio}
+
+        ui-set('padding', size['padding'])
+
+ui-radio-button-group()
+
+    ui-connect(
+        hash: $radio-button-brand-hash,
+        each: radio-button-group-style
+    )
+
+    ui-connect(
+        hash: $radio-button-size-hash,
+        each: radio-button-group-size
+    )

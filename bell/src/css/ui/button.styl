@@ -1,0 +1,37 @@
+{$selector-button}
+
+    ui-button()
+
+    display inline-block
+    text-align center
+    user-select none
+    white-space nowrap
+    cursor pointer
+    background-image none
+    font-weight 400
+    border 1px solid transparent
+
+    transition color .2s ease-out,
+        background-color .2s ease-out,
+        border .2s ease-out,
+        box-shadow .2s ease-out;
+
+    + {$selector-button}
+
+        margin-left 10px;
+
+    {$selector-icon}
+
+        vertical-align middle
+
+        + span
+
+            margin-left 4px
+
+{$selector-button}-fluid
+
+    ui-fluid()
+
+{$selector-buttons}
+
+    ui-buttons()

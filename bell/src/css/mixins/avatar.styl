@@ -1,0 +1,19 @@
+avatar-style(style)
+
+    ui-set('width', style['width'])
+    ui-set('height', style['width'])
+    ui-set('font-size', style['font'])
+    ui-set('line-height', style['width'])
+    ui-set('border-radius', style['border-radius'])
+
+    > {$seletor-icon}
+
+        ui-set('font-size', style['bell-icon-font'])
+        ui-set('line-height', style['width'])
+
+ui-avatar()
+
+    ui-connect(
+        hash: $avatar-size-hash,
+        each: avatar-style
+    )

@@ -1,0 +1,140 @@
+{$selector-input-wrapper}
+
+    &{$selector-input}-has-append,
+    &{$selector-input}-has-prepend
+
+        {$selector-input}
+
+            width auto
+
+
+    {$selector-input}-prepend,
+    {$selector-input}-append
+
+        border 1px solid
+        display inline-block
+        font-size 12px
+        vertical-align top
+        padding 0 10px
+
+    {$selector-input}-prepend
+
+        border-right 0
+        border-top-left-radius $radius-base
+        border-bottom-left-radius $radius-base
+
+        + {$selector-input},
+        + {$selector-input-number}
+
+            border-top-left-radius 0
+            border-bottom-left-radius 0
+
+    &{$selector-input}-has-append
+
+        {$selector-input},
+        {$selector-input-number}
+
+            border-top-right-radius 0
+            border-bottom-right-radius 0
+
+    {$selector-input}-append
+
+        border-left 0
+        border-top-right-radius $radius-base
+        border-bottom-right-radius $radius-base
+
+    ui-input()
+
+    &{$selector-input-wrapper}-disabled
+        {$selector-input}
+            cursor $cursor-disabled
+
+            {$selector-input-el}
+
+                cursor $cursor-disabled
+
+    &{$selector-input-wrapper}-clearable
+
+        {$selector-input-el}
+
+            padding-right $input-clearable-width
+
+        {$selector-input}-clear-icon
+
+            position absolute
+            right 0
+            text-align center
+            cursor $cursor-clickable
+
+            opacity 0
+            transition opacity .2s ease-in-out
+
+            width $input-clearable-width
+            font-size $input-clearable-font-size
+            color $input-clearable-color
+
+        &{$selector-hover}
+
+            {$selector-input}-clear-icon
+
+                opacity 1
+
+
+
+
+{$selector-textarea}
+    textarea
+        resize none
+
+{$selector-textarea},
+{$selector-input}
+
+    display inline-block
+    vertical-align middle
+    overflow hidden
+    width 100%
+    outline none
+    position relative
+    border 1px solid
+    border-radius $radius-base
+    transition border-color .3s, box-shadow .3s
+
+    {$selector-input}-icon-eye
+
+        position absolute
+        margin-left -30px
+        width 30px
+        text-align center
+        cursor pointer
+        color $input-eye-color
+        transition color .3s
+
+        &{$selector-hover}
+
+            color $input-eye-color-hover
+
+    {$selector-input-el}
+
+        border none
+        box-sizing border-box
+        display inline-block
+        outline none
+        width 100%
+        background-image none
+        position relative
+        cursor $cursor-text
+        background-color transparent
+
+        ui-input-el()
+
+        &::-webkit-input-placeholder  /* WebKit browsers */
+            color $input-el-placeholder-color
+
+        &:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+            color $input-el-placeholder-color
+
+        &::-moz-placeholder  /* Mozilla Firefox 19+ */
+            color $input-el-placeholder-color
+
+        &:-ms-input-placeholder  /* Internet Explorer 10+ */
+            color $input-el-placeholder-color

@@ -1,0 +1,136 @@
+{$selector-layout}
+
+    ui-row()
+    ui-layout()
+
+    {$selector-layout}-sider
+
+        position relative
+        transition flex .4s
+        overflow auto
+        max-height 100%
+
+    {$selector-sider}-trigger
+
+        position absolute
+        right 0
+        left 0
+        bottom 0
+        text-align center
+        padding 10px
+        cursor pointer
+
+    &{$selector-column}
+
+        ui-column()
+
+    &{$selector-fluid}
+
+        width 100%
+
+
+{$selector-layout-header}
+    display flex
+    flex-direction row
+    align-items flex-start
+
+{$selector-layout-header}-left
+    flex 1
+    align-self center
+    text-align center
+    justify-content center
+
+{$selector-layout-header}-right
+    flex 1
+    align-self center
+    text-align right
+    justify-content center
+
+{$selector-layout-header}-center
+    flex 4
+    align-self center
+    justify-content center
+
+{$selector-layout-footer}
+
+    align-self center
+    text-align center
+    justify-content center
+
+{$selector-layout-fixed}
+
+    ui-fullscreen()
+    overflow hidden
+
+{$selector-menu}
+
+    ui-menu()
+
+    height 62px
+    line-height 62px
+    font-size 14px
+
+{$selector-menu}-sub-menu,
+{$selector-menu}-item
+
+    position relative
+    padding $layout-menu-item-padding
+    cursor pointer
+    border-bottom 2px solid transparent
+    display inline-block
+    height inherit
+    line-height inherit
+    transition all 0.4s
+
+{$selector-menu-vertical}
+
+    height auto
+    text-align left
+
+    {$selector-menu}-sub-menu,
+    {$selector-menu}-item
+
+        line-height 48px
+        height 48px
+        overflow hidden
+        display block
+        border-bottom none
+        border-right 2px solid transparent
+        transition all 0.4s
+
+    {$selector-menu}-sub-menu
+
+        padding 0
+        height auto
+
+        {$selector-menu}-title
+            position relative
+
+            {$selector-menu}-title-icon
+                position absolute
+                top 50%
+                right 15px
+                transform translateY(-50%)
+
+        {$selector-menu}-title,
+        {$selector-menu}-item
+
+            padding 0 15px 
+
+        {$selector-menu}-groups
+
+            overflow hidden
+            transition height 0.4s
+
+
+
+    {$selector-menu}-group-title
+
+        padding 17px 10px
+        line-height 1
+
+{$selector-sider-collapsed}
+
+    {$selector-menu}-item
+
+        text-align center

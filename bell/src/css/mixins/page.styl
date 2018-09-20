@@ -1,0 +1,25 @@
+page-size(size)
+    {$selector-page}-list
+        {$selector-page}-item
+            ui-set('width', size['width'])
+            ui-set('height', size['height'])
+            ui-set('line-height', size['line-height'])
+            ui-set('margin-right', size['margin-right'])
+            ui-set('font-size', size['font-size'])
+
+            background #fff
+
+            {$selector-page}-prev
+
+                ui-set('margin-right', size['prev-margin-right'])
+
+            > {$selector-icon}
+
+                ui-set('line-height', size['bell-icon-line-height'])
+
+ui-page()
+
+    ui-connect(
+        hash: $page-size-hash,
+        each: page-size
+    )
