@@ -1,14 +1,9 @@
 module.exports = {
   list: [
     {
-      "name": "bell",
-      "path": "divawth/bell-ui",
-      "desc": "some functions"
-    },
-    {
-      "name": "bell-ui",
-      "path": "/divawth/bell-ui",
-      "desc": "ui"
+      "name": "project",
+      "path": "divawth/bell-project",
+      "desc": "new a project"
     }
   ]
 };
