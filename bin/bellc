@@ -11,14 +11,12 @@ program
 
 program.command('init (template)')
   .description("创建新新项目")
-  .alias('i')
   .action(function(template){
     init(template);
   });
 
 program.command('list')
   .description("显示可使用的模板列表")
-  .alias('l')
   .action(function(){
     list();
   });
