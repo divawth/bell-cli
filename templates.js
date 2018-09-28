@@ -3,7 +3,7 @@ module.exports = {
     {
       "name": "project",
       "path": "divawth/bell-project",
-      "desc": "some functions"
+      "desc": "new a project"
     }
   ]
 };
